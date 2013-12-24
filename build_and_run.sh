@@ -1,9 +1,6 @@
-cd ./fopdf
-play deps --sync
-play javadoc
-play build-module
+./build.sh
 
-cd ../samples-and-tests/pdf-sample-app
+cd ./samples-and-tests/pdf-sample-app
 play deps --sync
 play ec
 play run
