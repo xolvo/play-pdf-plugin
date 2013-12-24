@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+	<!--  defines the layout master  -->
+	<fo:layout-master-set>
+		<fo:simple-page-master
+			master-name="first"
+			
+			page-height="29.7cm"
+			page-width="21cm"
+			margin-top="1cm"
+			margin-bottom="2cm"
+			margin-left="2.5cm"
+			margin-right="2.5cm">
+
+		    <fo:region-body/>
+		    <fo:region-before/>
+		    <fo:region-after/> 
+		    <fo:region-start/>
+		    <fo:region-end/> 
+		</fo:simple-page-master>
+	</fo:layout-master-set>
+
+	<!--  starts actual layout  -->
+	<fo:page-sequence master-reference="first">
+		<fo:flow flow-name="xsl-region-body">
+
+			<fo:block font-size="12pt" text-align="right" color="gray" font-style="italic" font-weight="bold">
+			  This block of output will be written in a 12pt sans-serif font.
+			</fo:block>
+
+			<fo:block font-size="14px" font-family="Arial" text-align="center" font-style="italic">
+				А здесь текст на русском языке!
+
+				АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТт
+				УуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя
+			</fo:block>
+
+		</fo:flow>
+	</fo:page-sequence>
+
+</fo:root>

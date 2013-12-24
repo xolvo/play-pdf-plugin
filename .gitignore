@@ -1,0 +1,12 @@
+.DS_Store
+.classpath
+.project
+.settings
+eclipse
+lib
+samples-and-tests/pdf-sample-app/modules
+tmp
+dist
+*.pyc
+javadoc
+logs

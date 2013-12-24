@@ -1,0 +1,46 @@
+h1. PDF
+
+Use Apache FOP library to render PDF files from *.fo templates.
+Use Play! template syntax in you FOP templates.
+
+h2. Sample application
+
+Go to @samples-and-tests/pdf-sample-app@ and run it with:
+
+bc. play deps --sync
+play run
+
+h2. Getting started
+
+Because Play! 1.x modules repo has not longer accept new plugins, you should
+add our repository to @dependencies.yml@:
+
+bc. repositories:
+    - purecode:
+        type: http
+        artifact: "http://play.purecode.ru/1.x/[module]-[revision].zip"
+        contains:
+            - ru.purecode -> *
+
+And now you can add this module to @require@ section:
+
+bc. require:
+    - play
+    - ru.purecode -> fopdf 0.1.0
+
+h2. Usage
+
+bc. package controllers;
+ 
+import play.modules.fopdf.PDF;
+import play.mvc.Controller;
+ 
+public class Application extends Controller {
+ 
+    public static void index() {
+        PDF.render("pdf/test.fo");
+    }
+ 
+}
+
+p(note). Works only from controller

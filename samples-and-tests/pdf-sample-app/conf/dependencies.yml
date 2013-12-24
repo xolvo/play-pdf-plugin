@@ -1,0 +1,12 @@
+# Application dependencies
+
+require:
+    - play
+    - ru.purecode -> fopdf 0.1.0
+
+repositories:
+    - purecode:
+        type: local
+        artifact: "${application.path}/../../fopdf/dist/[module]-[revision].zip"
+        contains:
+            - ru.purecode -> *
