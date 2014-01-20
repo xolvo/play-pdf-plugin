@@ -14,7 +14,7 @@ Then add this module to `require` section:
 ```
 require:
     - play
-    - ru.purecode -> fopdf 0.1.0
+    - ru.purecode -> fopdf 0.2.0
 ```
 
 In your controller use:
