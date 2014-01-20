@@ -35,6 +35,10 @@
 				АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТт
 				УуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя
 			</fo:block>
+			
+			<fo:block font-size="18px" font-family="Arial" text-align="center" font-style="bold">
+				${text}
+			</fo:block>
 
 		</fo:flow>
 	</fo:page-sequence>

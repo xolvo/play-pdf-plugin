@@ -1,4 +1,4 @@
-self: play -> fopdf 0.1.0
+self: play -> fopdf 0.2.0
 
 require:
     - play 1.2.5
