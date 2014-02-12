@@ -14,7 +14,7 @@ Then add this module to `require` section:
 ```
 require:
     - play
-    - ru.purecode -> fopdf 0.2.0
+    - ru.purecode -> fopdf 0.3.0
 ```
 
 In your controller use:
@@ -36,3 +36,12 @@ public class Application extends Controller {
 
 `pdf/test.fo` is your FOP template where you can use Play! template features
 like variables, links and tags
+
+### DPI of images
+
+```
+fop.source.resolution=300
+fop.target.resolution=300
+```
+
+http://xmlgraphics.apache.org/fop/1.1/configuration.html

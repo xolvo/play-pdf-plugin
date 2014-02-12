@@ -11,8 +11,7 @@ import play.vfs.VirtualFile;
 public class Application extends Controller {
 
     public static void index() {
-    	String text = "asd asd asd asd и русские буквы";
-        PDF.render("pdf/test.fo", text);
+        PDF.render("pdf/test.fo");
     }
     
     public static void index2() throws IOException {
