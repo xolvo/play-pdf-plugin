@@ -29,15 +29,19 @@
 			  This block of output will be written in a 12pt sans-serif font.
 			</fo:block>
 
-			<fo:block font-size="14px" font-family="Arial" text-align="center" font-style="italic">
+			<fo:block font-size="14pt" font-family="Arial" text-align="center" font-style="italic">
 				А здесь текст на русском языке!
 
 				АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТт
 				УуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя
 			</fo:block>
 			
-			<fo:block font-size="18px" font-family="Arial" text-align="center" font-style="bold">
-				${text}
+			<fo:block font-size="14pt" font-family="OpenSans" text-align="center" font-style="italic" font-weight="500" margin-top="1cm">
+				Русский текст OpenSans (semibold)
+			</fo:block>
+
+			<fo:block font-size="14pt" font-family="OpenSans" text-align="center" font-style="italic" font-weight="bold">
+				Русский текст OpenSans (bold)
 			</fo:block>
 
 		</fo:flow>

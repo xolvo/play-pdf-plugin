@@ -6,20 +6,46 @@
 	    	</filterList>
 
 			<fonts>
-				<font metrics-url="conf/fonts/metrics/arial.xml" kerning="yes" embed-url="conf/fonts/ttf/arial.ttf">
+				<font metrics-url="conf/fonts/metrics/arial.xml" kerning="yes" embed-url="conf/fonts/ttf/arial/arial.ttf">
 					<font-triplet name="Arial" style="normal" weight="normal"/>
 				</font>
 		      
-				<font metrics-url="conf/fonts/metrics/arial_italic.xml" kerning="yes" embed-url="conf/fonts/ttf/arial_italic.ttf">
+				<font metrics-url="conf/fonts/metrics/arial_italic.xml" kerning="yes" embed-url="conf/fonts/ttf/arial/arial_italic.ttf">
 					<font-triplet name="Arial" style="italic" weight="normal"/>
 				</font>
 				
-				<font metrics-url="conf/fonts/metrics/arial_bold.xml" kerning="yes" embed-url="conf/fonts/ttf/arial_bold.ttf">
+				<font metrics-url="conf/fonts/metrics/arial_bold.xml" kerning="yes" embed-url="conf/fonts/ttf/arial/arial_bold.ttf">
 					<font-triplet name="Arial" style="normal" weight="bold"/>
 				</font>
 		
-				<font metrics-url="conf/fonts/metrics/arial_bold_italic.xml" kerning="yes" embed-url="conf/fonts/ttf/arial_bold_italic.ttf">
+				<font metrics-url="conf/fonts/metrics/arial_bold_italic.xml" kerning="yes" embed-url="conf/fonts/ttf/arial/arial_bold_italic.ttf">
 					<font-triplet name="Arial" style="italic" weight="bold"/>
+				</font>
+				
+				<!-- Open Sans fonts -->
+				
+				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-Italic.ttf">
+					<font-triplet name="OpenSans" style="italic" weight="normal"/>
+				</font>
+				
+				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-Regular.ttf">
+					<font-triplet name="OpenSans" style="normal" weight="normal"/>
+				</font>
+				
+				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-Semibold.ttf">
+					<font-triplet name="OpenSans" style="normal" weight="500"/>
+				</font>
+				
+				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-SemiboldItalic.ttf">
+					<font-triplet name="OpenSans" style="italic" weight="500"/>
+				</font>
+				
+				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-Bold.ttf">
+					<font-triplet name="OpenSans" style="normal" weight="bold"/>
+				</font>
+				
+				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-BoldItalic.ttf">
+					<font-triplet name="OpenSans" style="italic" weight="bold"/>
 				</font>
 			</fonts>
 	  </renderer>

@@ -28,7 +28,7 @@ public class PdfPlugin extends PlayPlugin {
 		setDpiOptionsFromApplicationConfig();
 		setFontsDefaultBasePath();
 		
-		setFopLoggerLevel(Level.FATAL);
+		//setFopLoggerLevel(Level.FATAL);
     }
 	
 	private void setupFopConfig() {
