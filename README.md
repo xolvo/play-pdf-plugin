@@ -14,7 +14,7 @@ Then add this module to `require` section:
 ```yaml
 require:
     - play
-    - ru.purecode -> fopdf 0.3.0
+    - ru.purecode -> fopdf 0.4.0
 ```
 
 In your controller use:
