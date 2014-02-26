@@ -18,9 +18,11 @@ import play.vfs.VirtualFile;
 public class PdfPlugin extends PlayPlugin {
 
 	private static FopFactory fop_factory;
+	private Properties config;
 
 	@Override
 	public void onApplicationStart() {
+		config = Play.configuration;
 		fop_factory = FopFactory.newInstance();
 		
 		setupFopConfig();
@@ -28,22 +30,24 @@ public class PdfPlugin extends PlayPlugin {
 		setDpiOptionsFromApplicationConfig();
 		setFontsDefaultBasePath();
 		
-		setFopLoggerLevel(Level.FATAL);
+		setFopLoggerLevelFromConfig();
     }
 	
 	private void setupFopConfig() {
-		VirtualFile vfile = getModuleRelativeFile("conf/fonts/conf.xml");
+		VirtualFile config_file = getModuleRelativeFile("conf/fonts/conf.xml");
+		
+		String fop_config_path = config.getProperty("fop.config.path");
+		if(fop_config_path != null)
+			config_file = VirtualFile.fromRelativePath(fop_config_path);
 		
 		try {
-			fop_factory.setUserConfig(vfile.getRealFile());
+			fop_factory.setUserConfig(config_file.getRealFile());
 		} catch (SAXException | IOException e) {
 			Logger.error(e, "Can not set user's FOP config");
 		}
 	}
 	
 	private void setDpiOptionsFromApplicationConfig() {
-		Properties config = Play.configuration;
-		
 		int source_resolution = Integer.parseInt(config.getProperty("fop.source.resolution", "72"));
 		int target_resolution = Integer.parseInt(config.getProperty("fop.target.resolution", "72"));
 		
@@ -60,14 +64,14 @@ public class PdfPlugin extends PlayPlugin {
 		}
 	}
 	
-	/**
-	 * Log only FATAL errors and not log messages like "Rendered page #1."
-	 * 
-	 * @param level
-	 */
 	private void setFopLoggerLevel(Level level) {
 		Log4JLogger log = (Log4JLogger) LogFactory.getLog("org.apache.fop");
-		log.getLogger().setLevel(org.apache.log4j.Level.FATAL);
+		log.getLogger().setLevel(level);
+	}
+	
+	private void setFopLoggerLevelFromConfig() {
+		String level = config.getProperty("fop.logger.level");
+		setFopLoggerLevel(Level.toLevel(level, Level.FATAL));
 	}
 	
 	private VirtualFile getModuleRelativeFile(String path) {

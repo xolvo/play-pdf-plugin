@@ -6,6 +6,15 @@
 	    	</filterList>
 
 			<fonts>
+				<!-- Custom fonts -->
+				
+				<font kerning="yes" embed-url="conf/fonts/nymphont_xiomara/Xiomara-Script.ttf">
+					<font-triplet name="Xiomara" style="normal" weight="normal"/>
+				</font>
+				
+				<!-- Default fonts -->
+				
+				<!-- Arial -->
 				<font metrics-url="conf/fonts/metrics/arial.xml" kerning="yes" embed-url="conf/fonts/ttf/arial/arial.ttf">
 					<font-triplet name="Arial" style="normal" weight="normal"/>
 				</font>
@@ -22,8 +31,7 @@
 					<font-triplet name="Arial" style="italic" weight="bold"/>
 				</font>
 				
-				<!-- Open Sans fonts -->
-				
+				<!-- OpenSans -->
 				<font kerning="yes" embed-url="conf/fonts/ttf/open-sans/OpenSans-Italic.ttf">
 					<font-triplet name="OpenSans" style="italic" weight="normal"/>
 				</font>
