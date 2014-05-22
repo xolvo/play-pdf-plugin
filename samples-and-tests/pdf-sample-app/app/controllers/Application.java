@@ -23,5 +23,13 @@ public class Application extends Controller {
 		String template_content = FileUtils.readFileToString(template_vf.getRealFile());
 		PDF.renderContent(template_content, text);
     }
+    
+    public static void index3() {
+    	play.modules.fopdf.Png.render("pdf/test.fo");
+    }
+    
+    public static void index4() {
+    	play.modules.fopdf.PostScript.render("pdf/test.fo");
+    }
 
 }
